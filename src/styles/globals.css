@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../../public/fonts/telegraf/PPTelegraf-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Telegraf-Bold';
+  src: url('../../public/fonts/telegraf/PPTelegraf-UltraBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Telegraf-Light';
+  src: url('../../public/fonts/telegraf/PPTelegraf-UltraLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../public/fonts/gotham/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../../public/fonts/gotham/GothamMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'San Fransisco';
+    src: url('../../public/fonts/san-fransisco/SFNSText-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Cy-Grotesk-Key-Bold';
+    src: url('../../public/fonts/cy-grotesk-key/cy-grotesk-key-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Samsung';
+    src: url('../../public/fonts/samsung/samsung.ttf') format('truetype');
+}
+
+
+.font-telegraf {
+  font-family: 'Telegraf', sans-serif;
+}
+
+.font-telegraf-bold{
+    font-family: 'Telegraf-Bold', sans-serif;
+}
+
+.font-telegraf-light{
+    font-family: 'Telegraf-Light', sans-serif;
+}
+
+.font-gotham{
+    font-family: 'Gotham', sans-serif;
+}
+
+.font-gotham-medium{
+    font-family: 'Gotham-Medium', sans-serif;
+}
+
+.font-san-fransisco{
+    font-family: 'San Fransisco', sans-serif;
+}
+
+.font-cy-grotesk-key-bold{
+    font-family: 'Cy-Grotesk-Key-Bold', sans-serif;
+}
+
+.font-samsung{
+    font-family: 'Samsung', sans-serif;
+}
+
+.custom-gradient {
+    background: linear-gradient(0deg, #beb7ad 0%, #000000 40%);
+  }
+  
+  @media (min-width: 1024px) { 
+    .custom-gradient {
+      background: linear-gradient(0deg, #beb7ad 0%, #000000 45%);
+    }
+  }
+  
+  @media (min-width: 1280px) { 
+    .custom-gradient {
+      background: linear-gradient(0deg, #beb7ad 0%, #000000 50%);
+    }
+  }
+
+  .middle-gradient {
+    background: linear-gradient(180deg, black 0%, black 0%,  #2b2d29 50%, black 100%, black 100%);
+  }
+  
+  

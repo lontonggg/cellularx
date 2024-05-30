@@ -21,7 +21,7 @@ export const Navbar = () => {
 
       {/* Hamburger Navbar */}
       <div className='lg:hidden'>
-        <header className='fixed top-0 left-0 w-full border-gray-300 border-2 p-8 flex justify-between items-center bg-white'>
+        <header className='fixed top-0 left-0 w-full p-4 flex justify-between items-center bg-white'>
           <Link href="/" className='font-telegraf-bold text-2xl'>Cellular X</Link>
           <PopoverButton className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400
           hover:bg-gray-100 hover-text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
@@ -41,7 +41,7 @@ export const Navbar = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <PopoverPanel focus className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden">
+        <PopoverPanel focus className="fixed inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden">
           <div className='rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50'>
             <div className='px-5 pt-5 pb-6'>
               <div className='flex items-center justify-between'>

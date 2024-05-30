@@ -5,7 +5,7 @@ import iphone15 from '../../../public/images/iphone.png';
 
 export const MainBanner = () => {
   return (
-    <div className="custom-gradient py-10">
+    <div className="custom-gradient py-20">
       <div className="grid grid-cols-2 mx-5 lg:mx-20">
         <div className="text-center flex flex-col items-center justify-center py-10">
           <h1 className="font-san-fransisco font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-6xl py-2 flex items-center justify-center">

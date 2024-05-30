@@ -4,7 +4,7 @@ import { MdArrowOutward } from 'react-icons/md';
 
 export const SecondBanner = () => {
   return (
-    <div className='middle-gradient'>
+    <div className='middle-gradient my-10'>
       <div className='grid grid-cols-7 ml-8 sm:ml-14 md:ml-16 xl:ml-20'>
         <div className='border col-span-4'>Samsung Image</div>
         <div className='border col-span-3'>

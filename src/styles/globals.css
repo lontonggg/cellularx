@@ -95,4 +95,104 @@
     background: linear-gradient(180deg, black 0%, black 0%,  #2b2d29 50%, black 100%, black 100%);
   }
   
+  .quote-symbol {
+    font-size: 4rem;
+    color: #A9A9A9;
+    position: absolute;
+    top: -20px;
+  }
+  
+  .Testimony p::before {
+    content: '“';
+    font-size: 5.5rem;
+    font-family: 'Cy-Grotesk-Key-Bold';
+    color: #A9A9A9;
+    position: absolute;
+    left: -20px;
+    top: 0;
+  }
+  
+  .Testimony p::after {
+    content: '”';
+    font-size: 5.5rem;
+    font-family: 'Cy-Grotesk-Key-Bold';
+    color: #A9A9A9;
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+  }
+
+  @media (max-width: 1200px) {
+    .Testimony p::before {
+      font-size: 4.5rem;
+      left: 0px;
+    }
+    .Testimony p::after {
+      font-size: 4.5rem;
+      right: 0px;
+    }
+    .Testimony p {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .Testimony p::before {
+      font-size: 4rem;
+      left: 0px;
+    }
+    .Testimony p::after {
+      font-size: 4rem;
+      right: 0px;
+    }
+    .Testimony p {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Testimony p::before {
+      font-size: 3.5rem;
+      left: 0px;
+      top: -15px;
+    }
+    .Testimony p::after {
+      font-size: 3.5rem;
+      right: 0px;
+      bottom: -30px;
+    }
+    .Testimony p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .Testimony p::before {
+      font-size: 3rem;
+      left: 0px;
+    }
+    .Testimony p::after {
+      font-size: 3rem;
+      right: 0px;
+    }
+    .Testimony p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  
+
+  .underline-gradient {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 55%;
+    height: 7px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #FD4501, black);
+    transform: translateX(-50%);
+  }
   

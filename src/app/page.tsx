@@ -8,6 +8,7 @@ import { Payments } from "@/components/home/Payments";
 import { Profile } from "@/components/home/Profile";
 import { SecondBanner } from "@/components/home/SecondBanner";
 import { SocialMedia } from "@/components/home/SocialMedia";
+import { Testimony } from "@/components/home/Testimony";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <MainBanner />
         <SecondBanner />
         <Profile />
+        <Testimony />
         <OurProducts />
         <BrokenDevice />
         <FindUs />

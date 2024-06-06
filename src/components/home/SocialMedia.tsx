@@ -2,9 +2,13 @@ import Image from 'next/image';
 import React from 'react';
 import cornerasset from '../../../public/images/corner-asset.png';
 
-export const SocialMedia = () => {
+interface SocialMediaProps {
+  id?: string;
+}
+
+export const SocialMedia: React.FC<SocialMediaProps> = ({ id }) => {
   return (
-    <div className='relative'>
+    <div id={id} className='relative'>
       <div className="absolute bottom-0 left-0 w-16 sm:w-32 md:w-40 lg:w-48 xl:w-64">
         <Image
           src={cornerasset}

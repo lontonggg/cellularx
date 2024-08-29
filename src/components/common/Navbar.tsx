@@ -1,9 +1,10 @@
-'use client'
+'use client';
 
 import { Popover, PopoverButton, PopoverOverlay, PopoverPanel, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
-import React, { Fragment } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import React, { Fragment, useEffect, useState } from 'react';
 
 const scrollWithOffset = (id: string) => {
   const element = document.getElementById(id);
@@ -22,9 +23,23 @@ const scrollWithOffset = (id: string) => {
 };
 
 export const Navbar: React.FC = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const handleScroll = (id: string) => (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
-    scrollWithOffset(id);
+    if (!isMounted) return;
+
+    if (pathname !== '/') {
+      router.push(`/#${id}`);
+    } else {
+      scrollWithOffset(id);
+    }
   };
 
   return (
@@ -35,7 +50,7 @@ export const Navbar: React.FC = () => {
           <Link href="/" className='font-bold'>Cellular X</Link>
           <nav className='flex gap-14'>
             <a href="#profile" onClick={handleScroll('profile')} className='font-telegraf hover:font-bold'>About</a>
-            <a href="#products" onClick={handleScroll('products')} className='font-telegraf hover:font-bold'>Product</a>
+            <a href="/products" className='font-telegraf hover:font-bold'>Product</a>
             <a href="#testimony" onClick={handleScroll('testimony')} className='font-telegraf hover:font-bold'>Testimony</a>
             <a href="#social-media" onClick={handleScroll('social-media')} className='font-telegraf hover:font-bold'>Contact</a>
           </nav>
@@ -79,7 +94,7 @@ export const Navbar: React.FC = () => {
                 <nav className='grid gap-y-8'>
                   <a href="/" onClick={handleScroll('/')} className='font-telegraf hover:font-bold focus:outline-none px-2'>Home</a>
                   <a href="#profile" onClick={handleScroll('profile')} className='font-telegraf hover:font-bold focus:outline-none px-2'>About</a>
-                  <a href="#products" onClick={handleScroll('products')} className='font-telegraf hover:font-bold focus:outline-none px-2'>Product</a>
+                  <a href="/products" className='font-telegraf hover:font-bold focus:outline-none px-2'>Product</a>
                   <a href="#testimony" onClick={handleScroll('testimony')} className='font-telegraf hover:font-bold focus:outline-none px-2'>Testimony</a>
                   <a href="#social-media" onClick={handleScroll('social-media')} className='font-telegraf hover:font-bold focus:outline-none px-2'>Contact</a>
                 </nav>
@@ -89,7 +104,7 @@ export const Navbar: React.FC = () => {
         </PopoverPanel>
       </Transition>
     </Popover>
-  )
+  );
 };
 
 export default Navbar;

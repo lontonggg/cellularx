@@ -40,7 +40,7 @@ export const SecondBanner = () => {
             <p className='font-gotham font-extralight text-sm sm:text-lg md:text-2xl xl:text-3xl pt-10 md:pt-16 xl:pt-28'>256 GB | 512 GB | 1TB</p>
           </div>
           <div className='font-cy-grotesk-key-bold border p-2 md:p-4 md:px-10 md:text-2xl lg:text-4xl xl:text-5xl xl:p-10 hover:underline'>
-            <Link href="/" className='flex gap-4 lg:gap-10 items-center'>BUY NOW <MdArrowOutward className='size-8 sm:size-10 md:size-14 lg:size-20 xl:size-24'/></Link>
+            <Link href="mailto:cellularx@cellularxca.com?subject=Inquiry%20about%20Samsung%20Galaxy%20S23%20Ultra&body=Hi,%20I%20am%20interested%20in%20the%20Samsung%20Galaxy%20S23%20Ultra.%20Please%20provide%20me%20with%20more%20information." className='flex gap-4 lg:gap-10 items-center'>BUY NOW <MdArrowOutward className='size-8 sm:size-10 md:size-14 lg:size-20 xl:size-24'/></Link>
           </div>
         </div>
       </div>

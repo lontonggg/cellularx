@@ -2,6 +2,7 @@ import React from 'react';
 import { FaApple } from 'react-icons/fa';
 import Image from 'next/image';
 import iphone15 from '../../../public/images/iphone.png';
+import Link from 'next/link';
 
 export const MainBanner = () => {
   return (
@@ -14,10 +15,12 @@ export const MainBanner = () => {
           <p className="font-gotham text-xs sm:text-md md:text-lg lg:text-xl xl:text-4xl xl:py-3 xl:pt-5">Titanium.</p>
           <p className="font-gotham text-xs sm:text-md md:text-lg lg:text-xl xl:text-4xl">So strong. So light. So Pro.</p>
           <h1 className="font-gotham text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-5xl p-6 sm:pt-4 sm:pb-4 xl:pt-14 xl:pb-8">Available Now</h1>
-          <button className="font-telegraf border text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-4xl border-white rounded-full py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5 
-          px-9 sm:px-12 md:px-16 lg:px-20 xl:px-24 bg-transparent hover:bg-white hover:text-black transform hover:scale-105 hover:font-bold transition duration-300 ease-in-out ">
-            Buy Now
-          </button>
+          <Link href="mailto:cellularx@cellularxca.com?subject=Inquiry%20about%20iPhone%2015%20Pro&body=Hi,%20I%20am%20interested%20in%20the%20iPhone%2015%20Pro.%20Please%20provide%20me%20with%20more%20information.">
+            <button className="font-telegraf border text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-4xl border-white rounded-full py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5 
+            px-9 sm:px-12 md:px-16 lg:px-20 xl:px-24 bg-transparent hover:bg-white hover:text-black transform hover:scale-105 hover:font-bold transition duration-300 ease-in-out ">
+              Buy Now
+            </button>
+          </Link>
         </div>
         <div className='flex justify-center items-center'>
           <div className="relative group w-full max-w-lg">

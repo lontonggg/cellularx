@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 import upward_arrow from '../../../public/images/upward-arrow.png';
-import { usePathname } from 'next/navigation';
 
 interface ProductCardProps {
   name: string;
@@ -11,10 +10,9 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ name, image, link }) => {
-  const pathname = usePathname();
   return (
-    <div className='m-4 flex flex-col justify-between font-telegraf gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 sm:m-6 md:m-8 lg:m-10 xl:m-12' style={{ flex: '0 0 25%' }}>
-      <div className='relative bg-gray-100 rounded-xl flex flex-col items-center justify-center overflow-hidden' style={{ height: '350px', width: '100%', aspectRatio: 1/1 }}>
+    <div className='m-4 flex flex-col justify-between font-telegraf gap-5 sm:gap-7 md:gap-9 lg:gap-11 xl:gap-14 sm:m-6 md:m-8 lg:m-10 xl:m-12'>
+      <div className='relative bg-white rounded-xl flex flex-col items-center justify-center overflow-hidden' style={{ paddingBottom: '100%' }}>
         <Image
           src={image}
           layout="fill"
@@ -23,12 +21,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ name, image, link }) =
           alt={name}
         />
       </div>
-      <h1 className='font-bold text-2xl lg:text-3xl xl:text-4xl'>{name}</h1>
+      <h1 className='font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>{name}</h1>
       <div className='flex justify-between items-center'>
-        <h1 className='text-2xl lg:text-3xl xl:text-4xl hover:font-bold hover:underline'>
+        <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl hover:font-bold hover:underline'>
           <Link href={link}>Buy Now</Link>
         </h1>
-        <div className='w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18'>
+        <div className='w-8 h-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16'>
           <Image
             src={upward_arrow}
             layout="responsive"

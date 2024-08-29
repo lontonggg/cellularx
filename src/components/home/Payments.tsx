@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import rightarrow from '../../../public/images/right-arrow.png';
+import Link from 'next/link';
 
 export const Payments = () => {
   return (
@@ -28,10 +29,12 @@ export const Payments = () => {
         <div className='bg-white text-black'>
             <div className='text-center p-10 sm:p-14 md:p-20 lg:p-28'>
                 <h1 className='font-telegraf font-bold mb-2 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'>Sales this way!</h1>
-                <button className='font-telegraf border-2 border-black rounded-full text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
-                px-8 sm:px-10 md:px-14 lg:px-16 py-1 md:py-2 transition transform duration-300 ease-in-out hover:font-bold hover:scale-110'>
-                    Buy Now
-                </button>
+                <Link href="/products">
+                    <button className='font-telegraf border-2 border-black rounded-full text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
+                    px-8 sm:px-10 md:px-14 lg:px-16 py-1 md:py-2 transition transform duration-300 ease-in-out hover:font-bold hover:scale-110'>
+                        Buy Now
+                    </button>
+                </Link>
             </div>
         </div>
     </div>

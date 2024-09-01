@@ -15,6 +15,7 @@ import { MainBanner } from "@/components/home/MainBanner";
 import { SecondBanner } from "@/components/home/SecondBanner";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { HowToBook } from "@/components/home/HowToBook";
+import { PhoneService } from "@/components/home/PhoneService";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +46,8 @@ export default function Home() {
       <div className="relative z-20">
         <Navbar />
       </div>
-      <div className="relative z-10 text-white mt-16">
+      <div className="relative z-10 text-white">
+        <PhoneService />
         <div className="relative">
           <div
             className={`carousel transition-opacity duration-500 ease-in-out ${
